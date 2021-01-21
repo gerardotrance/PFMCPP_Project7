@@ -7,4 +7,3 @@ struct AttackItem : Item
     
     void use(Character* character) override;
 };
-

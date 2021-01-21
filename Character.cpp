@@ -2,6 +2,7 @@
 #include "DefensiveItem.h"
 #include "HelpfulItem.h"
 
+
 Character::Character(int hp, int armor_, int attackDamage_ ) :
     hitPoints(hp),
     armor(armor_),
@@ -23,8 +24,8 @@ void Character::attack( Character& other )
         
     isDefending = false;
     std::cout << getName() << " has attacked " << other.getName() << std::endl;
-    //subtract attackDamage from other->hitPoints
-    if( other.takeDamage(attackDamage) <= 0 )
+    
+    if( other.takeDamage(attackDamage) <= 0 ) 
     {
         //if you kill other, you get a boost in hit points and armor.
         attackInternal(other);
@@ -83,24 +84,29 @@ int Character::takeDamage(int damage)
     return hitPoints;
 }
 
-
+void defeatAndLevelUp(int& startingValue, int& currentValue)
+{
+    if(currentValue < startingValue)
+    {
+        currentValue = startingValue;
+    }
+    currentValue += currentValue * 0.10;
+    startingValue = currentValue;
+}
 
 void Character::attackInternal(Character& other)
 {
-    if( other.hitPoints <= 0 )
-    {
-        /*
-        When you defeat another Character: 
-            a) your stats are restored to their initial value if they are lower than it.
-            b) your stats are boosted 10%
-            c) the initial value of your stats is updated to reflect this boosted stat for the next time you defeat another character.
-      */
+    /*
+    When you defeat another Character: 
+        a) your stats are restored to their initial value if they are lower than it.
+        b) your stats are boosted 10%
+        c) the initial value of your stats is updated to reflect this boosted stat for the next time you defeat another character.
+    */
     defeatAndLevelUp( *initialHitPoints, hitPoints );
     defeatAndLevelUp( *initialArmorLevel, armor );
     defeatAndLevelUp( *initialAttackDamage, attackDamage );
 
-    std::cout << getName() << " defeated " << other.getName() << " and leveled up!" << std::endl;        
-    }
+    std::cout << getName() << " defeated " << other.getName() << " and leveled up!" << std::endl;  
 }
 
 void Character::printStats()

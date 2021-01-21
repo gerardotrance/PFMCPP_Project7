@@ -1,5 +1,4 @@
 #pragma once
-
 #include <string>
 #include <vector>
 #include <memory>
@@ -7,11 +6,10 @@
 #include "Item.h"
 #include "Utility.h"
 
-
 struct Character
 {
     Character(int hp, int armor_, int attackDamage_ );
-    virtual ~Character(){}
+    virtual ~Character() { }
     
     /*
      a pure virtual getName function.
@@ -55,7 +53,7 @@ struct Character
     }
 
     void printStats();
-
+    
 protected:
     std::vector<std::unique_ptr<Item>> defensiveItems;
     std::vector<std::unique_ptr<Item>> helpfulItems;
