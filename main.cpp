@@ -68,7 +68,7 @@ int main()
 {
                       //name, hit points, armor. 
     Dwarf dwarf { "Maldin the Dwarf", 3, 1 };
-    Paladin paladin { "Warrick the Paladin", 5, 2 };
+    /*Paladin paladin { "Warrick the Paladin", 5, 2 };
     Dragon dragon { "Garry The Dragon", 200, 50 };
     DragonSlayer dragonSlayer { "Virgil the Dragon Slayer", 8, 5 };
     
@@ -94,7 +94,7 @@ int main()
     
     std::vector<Character*> characters { &dwarf, &paladin, &dragon, &dragonSlayer };
     for( auto* character : characters )
-        character->printStats();
+        character->printStats();*/
     
     return 0;
 }
