@@ -3,6 +3,7 @@
 #include "HelpfulItem.h"
 #include "DefensiveItem.h"
 #include "Character.h"
+#include "Dwarf.h"
 
 
 std::vector<std::unique_ptr<Item>> makeHelpfulItems(int num)

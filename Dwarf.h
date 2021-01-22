@@ -14,16 +14,11 @@ struct Dwarf : Character
         
     }
 
-    
-    const std::string& getName() override
-    {
-        return name;
-    }
-    std::string getStats() override
-    {
-        return getCharacterStats(this);
-    }
+    ~Dwarf() override;
 
+    
+    const std::string& getName() override;
+    std::string getStats() override;
 private:
     const std::string name;
 };
