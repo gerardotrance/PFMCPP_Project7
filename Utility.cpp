@@ -4,7 +4,7 @@
 #include "DefensiveItem.h"
 #include "Character.h"
 #include "Dwarf.h"
-
+#include "Paladin.h"
 
 std::vector<std::unique_ptr<Item>> makeHelpfulItems(int num)
 {
