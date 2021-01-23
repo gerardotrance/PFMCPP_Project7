@@ -2,6 +2,7 @@
 
 #include "Character.h"
 #include "Utility.h"
+#include "AttackItem.h"
 
 struct Dragon : Character
 {
@@ -11,6 +12,8 @@ struct Dragon : Character
         
     }
 
+    AttackItem attackItem_;
+    
     ~Dragon() override;
 
     void attack(Character& other) override;
