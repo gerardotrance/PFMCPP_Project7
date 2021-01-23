@@ -12,7 +12,6 @@ struct Dragon : Character
         
     }
 
-    AttackItem attackItem_;
     
     ~Dragon() override;
 
