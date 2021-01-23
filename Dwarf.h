@@ -9,11 +9,8 @@ struct Dwarf : Character
     //Dwarf dwarf { "Maldin the Dwarf", 3, 1 };
     //Character(int hp, int armor_, int attackDamage_ );
     //Dwarf's attackDamage is 4
-    Dwarf(std::string n, int hp, int armor) : Character(hp, armor, 4), name(n)
-    {
-        
-    }
-
+    Dwarf(std::string n, int hp, int armor);
+    
     ~Dwarf() override;
 
     

@@ -1,10 +1,12 @@
 #pragma once
 #include "Character.h"
+#include "Utility.h"
 
 struct Paladin : Character
 {
-    Paladin(std::string n, int hp, int armor) : Character(hp, armor, 10), name(n){}
-
+    
+    Paladin(std::string n, int hp, int armor);
+    
     ~Paladin() override;
 
     const std::string& getName() override;
