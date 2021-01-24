@@ -18,7 +18,7 @@ void DragonSlayer::attack(Character& other)
     std::cout << name << " is attacking " << other.getName() << " !!" << std::endl;
     if( auto* dragon = dynamic_cast<Dragon*>(&other) )
     {
-        attackItem->use(this);
+        attackItem->use(this); FIXME: make sure your attack item is valid before trying to use it.  hint: project 6 part 1
         attackItem.reset();
         //assert(false);
         //DragonSlayers get a 10x boost when attacking dragons, from their attack item.
@@ -26,7 +26,7 @@ void DragonSlayer::attack(Character& other)
         //
         while( dragon->getHP() > 0 )
         {
-          dragon->takeDamage(attackDamage);
+            dragon->takeDamage(attackDamage);
         }
     }
         

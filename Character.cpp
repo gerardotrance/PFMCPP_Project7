@@ -89,7 +89,7 @@ int Character::takeDamage(int damage)
 void boost(int& current, int& initial)
 {
     if(current < initial)
-    current = initial;
+    current = initial; FIXME: fix the indentation
 
     current *= 1.1;
     initial = current;

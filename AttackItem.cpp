@@ -7,7 +7,7 @@
 
 void AttackItem::use(Character* character)
 {
-    //assert(false); 
+    assert(false); 
     //make your defensive item use the appropriate Utility helper functions
     void useAttackItem(Character*, Item*);
 }
