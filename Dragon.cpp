@@ -1,5 +1,6 @@
 #include "Dragon.h"
 #include "DragonSlayer.h"
+#include "Utility.h"
 
 //Dragon::Dragon
 

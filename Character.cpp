@@ -89,10 +89,10 @@ int Character::takeDamage(int damage)
 void boost(int& current, int& initial)
 {
     if(current < initial)
-    current = initial; FIXME: fix the indentation
+        current = initial;
 
-    current *= 1.1;
-    initial = current;
+        current *= 1.1;
+        initial = current;
 }
 
 //#include <assert>
@@ -116,16 +116,4 @@ void Character::attackInternal(Character& other)
     }
 }
 
-//void Character::printStats()
-//{
-//   std::cout << getName() << "'s stats: " << std::endl;
-    //assert(false);
-    /*
-    make your getStats() use a function from the Utility.h
-    */
-//    std::cout << getStats(); 
-    
-//    std::cout << std::endl;
-//    std::cout << std::endl;
 
-//}

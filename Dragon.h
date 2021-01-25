@@ -1,13 +1,12 @@
 #pragma once
 
 #include "Character.h"
-#include "Utility.h"
-#include "AttackItem.h"
+
 
 struct Dragon : Character
 {
     
-    Dragon(std::string n, int hp, int armor) : Character(hp, armor, 96), name(n)
+    Dragon(std::string n, int hp, int armor) : Character(hp, armor, 80), name(n)
     {
         
     }
