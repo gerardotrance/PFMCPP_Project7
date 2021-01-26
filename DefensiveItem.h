@@ -1,7 +1,6 @@
 #pragma once
 
 #include "Item.h"
-#include "Character.h"
 
 struct DefensiveItem : Item
 {
@@ -9,3 +8,4 @@ struct DefensiveItem : Item
     void use(Character* character) override;
 };
 
+         
