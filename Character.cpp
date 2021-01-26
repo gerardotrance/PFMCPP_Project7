@@ -88,13 +88,14 @@ int Character::takeDamage(int damage)
 
 void boost(int& current, int& initial)
 {
+    
     if(current < initial)
     {
         current = initial;
-
-        current *= 1.1;
-        initial = current;  
     }
+    
+    current *= 1.1;
+    initial = current;  
     
 }
 
