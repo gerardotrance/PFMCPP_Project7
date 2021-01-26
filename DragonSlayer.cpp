@@ -3,10 +3,10 @@
 #include "Utility.h"
 
 //DragonSlayer::DragonSlayer
-DragonSlayer::DragonSlayer(std::string n, int hp, int armor) : Character(hp, armor, 57), name(n)
+DragonSlayer::DragonSlayer(std::string n, int hp, int armor) : Character(hp, armor, 4), name(n)
 {
-    helpfulItems = makeHelpfulItems(2);
-    defensiveItems = makeDefensiveItems(6);
+    helpfulItems = makeHelpfulItems(3);
+    defensiveItems = makeDefensiveItems(7);
 }
 //DragonSlayer::getName
 const std::string& DragonSlayer::getName()
