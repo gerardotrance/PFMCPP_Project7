@@ -86,8 +86,20 @@ int Character::takeDamage(int damage)
     return hitPoints;
 }
 
+void boost(int& current, int& initial)
+{
+    
+    if(current < initial)
+    {
+        current = initial;
+    }
+    
+    current *= 1.1;
+    initial = current;  
+    
+}
 
-#include <assert>
+//#include <assert>
 void Character::attackInternal(Character& other)
 {
     if( other.hitPoints <= 0 )
@@ -98,20 +110,14 @@ void Character::attackInternal(Character& other)
             b) your stats are boosted 10%
             c) the initial value of your stats is updated to reflect this boosted stat for the next time you defeat another character.
       */
-        assert(false);
+        boost(hitPoints, *initialHitPoints);
+        boost(armor, *initialArmorLevel);
+        boost(attackDamage, *initialAttackDamage);
+
+
+        //assert(false);
         std::cout << getName() << " defeated " << other.getName() << " and leveled up!" << std::endl;        
     }
 }
 
-void Character::printStats()
-{
-    std::cout << getName() << "'s stats: " << std::endl;
-    assert(false);
-    /*
-    make your getStats() use a function from the Utility.h
-    */
-    std::cout << getStats(); 
-    
-    std::cout << std::endl;
-    std::cout << std::endl;
-}
+
